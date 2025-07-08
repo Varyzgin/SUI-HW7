@@ -15,20 +15,19 @@ struct PostView: View {
     
     var body: some View {
         VStack {
-            AsyncImage(url: URL(string: imageUrl)!) { $0
+            GeometryReader { geom in
+                AsyncImage(url: URL(string: imageUrl)!) { $0
                     .resizable()
-                    .aspectRatio(CGSize(width: 1, height: 1), contentMode: .fill)
-                    .frame(maxWidth: .infinity)
+                    .scaledToFill()
+                    .frame(width: geom.size.width, height: geom.size.width)
                     .clipped()
-            } placeholder: {
-                GeometryReader {
+                } placeholder: {
                     ProgressView()
-                        .frame(width: $0.size.width, height: $0.size.width)
+                        .frame(width: geom.size.width, height: geom.size.width)
                 }
-                .aspectRatio(1, contentMode: .fit)
             }
-
-          
+            .aspectRatio(1, contentMode: .fit)
+            
             VStack {
                 HStack {
                     Text(title)
