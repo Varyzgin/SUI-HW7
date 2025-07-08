@@ -1,3 +1,4 @@
-LazyVGrid, custom ViewModifier sets, MVVM, Unsplash API Networking
+LazyVGrid, custom ViewModifier sets, MVVM, Unsplash API Networking, GeometryReader for square photos
 
-![image](https://github.com/user-attachments/assets/65a2c9b1-4027-4640-9477-c32726787003)
+<img width="511" alt="image" src="https://github.com/user-attachments/assets/746b6928-799d-475c-ba7a-048725c32dbc" />
+
